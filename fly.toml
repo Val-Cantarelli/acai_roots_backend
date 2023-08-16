@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for schedulemanager on 2023-08-15T14:26:10-04:00
+# fly.toml app configuration file generated for schedulemanager on 2023-08-15T20:24:20-04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -10,8 +10,6 @@ kill_timeout = "5s"
 
 [build]
   builder = "paketobuildpacks/builder:base"
-  buildpacks = ["gcr.io/paketo-buildpacks/nodejs"]
-  image = "sha256:f09b6ef70d0dea7290e662df8aca705a6bc4a1b484b94731da46cc95129a89e6"
 
 [http_service]
   internal_port = 8080
