@@ -18,7 +18,7 @@ ENV PATH=$PATH:/app/apache-maven-3.9.4/bin/
 # Copy pom.xml do host para o container(o ponto indica o dir atual - no caso /usr/src/app)
 
 COPY pom.xml .
-
+RUN mvn --version
 RUN mvn dependency:go-offline
 RUN yum install -y freetype-devel
 
