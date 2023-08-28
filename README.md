@@ -1,4 +1,3 @@
-# ScheduleManagement
 
 # Schedule Management
 
