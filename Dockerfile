@@ -5,4 +5,6 @@ RUN microdnf update -y && \
 COPY . .
 EXPOSE 8080
 
+#RUN mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies package
+
 CMD ["mvn", "spring-boot:run"]
