@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "https://val-cantarelli.github.io/makeyourcup/")
 @RestController
 @RequestMapping(value = "/status")
 public class StatusController {
