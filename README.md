@@ -30,7 +30,7 @@ By Fly.io:
 - Config the CLI
 
 ```agsl
-fly launch
+fly deploy
 ```
 
 ##### Technologies
