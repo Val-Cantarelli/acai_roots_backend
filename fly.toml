@@ -7,10 +7,11 @@ app = "schedule-management"
 primary_region = "yyz"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
+swap_size_mb = 512
 
 [http_service]
   internal_port = 8080
-  force_https = true
+  force_https = false
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
@@ -24,7 +25,7 @@ kill_timeout = "5s"
   [[services.ports]]
     port = 80
     handlers = ["http"]
-    force_https = true
+    force_https = false
 
   [[services.ports]]
     port = 443
@@ -33,3 +34,11 @@ kill_timeout = "5s"
     type = "connections"
     hard_limit = 25
     soft_limit = 20
+
+[[http_service.checks]]
+  grace_period = "10s"
+  interval = "30s"
+  method = "GET"
+  timeout = "5s"
+  path = "/ingredients"
+
