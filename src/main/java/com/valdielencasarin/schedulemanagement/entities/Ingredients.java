@@ -5,12 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 @Data
 @NoArgsConstructor
 @Builder
 @AllArgsConstructor
+@Document
 public class Ingredients {
 
     List<Size> sizes;
@@ -18,7 +20,7 @@ public class Ingredients {
     @JsonProperty("typeofcups")
     List<CupType> typeOfCups;
 
-    @JsonProperty("extrafruits")
+    @JsonProperty("extra_fruits")
     List<ExtraFruit> extraFruitsList;
 
     @Data
