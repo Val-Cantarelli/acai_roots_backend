@@ -2,17 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
-	<groupId>com.valdielencasarin.schedulemanagement</groupId>
-	<artifactId>schedulemanagement</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.2</version>
 	</parent>
 
+	<groupId>com.valdielencasarin.schedulemanagement</groupId>
+	<artifactId>schedulemanagement</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
 	<description>Schedule Management Project</description>
 	<properties>
@@ -20,16 +18,6 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.28</version>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -40,7 +28,18 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.28</version>
+			<scope>provided</scope>
+		</dependency>
 
+		<!--Mongo DB-->
 		<dependency>
 				<groupId>org.mongodb</groupId>
 				<artifactId>mongodb-driver-sync</artifactId>
@@ -56,15 +55,16 @@
 			<artifactId>logback-classic</artifactId>
 			<version>1.3.2</version>
 		</dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
 
+    </dependencies>
 
-
-
-	</dependencies>
 	<build>
-
 		<plugins>
-
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -75,7 +75,7 @@
 				<version>2.22.2</version>
 			</plugin>
 
-			<plugin>
+			<!--<plugin>
 				<groupId>de.qaware.maven</groupId>
 				<artifactId>go-offline-maven-plugin</artifactId>
 				<version>1.2.8</version>
@@ -103,14 +103,14 @@
 						</DynamicDependency>
 					</dynamicDependencies>
 				</configuration>
-			</plugin>
+			</plugin>-->
 
 
 
 		</plugins>
 	</build>
 
-	<profiles>
+	<!--<profiles>
 		<profile>
 			<id>native</id>
 			<build>
@@ -142,13 +142,7 @@
 				</plugins>
 			</build>
 		</profile>
-	</profiles>
-	<repositories>
-		<!--If you use a SNAPSHOT version, you need to ensure that you have the Spring Snapshot repository defined -->
-
-
-
-	</repositories>
+	</profiles>-->
 
 </project>
 
