@@ -6,7 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.math.BigDecimal;
 import java.util.List;
 @Data
 @NoArgsConstructor
@@ -15,38 +17,36 @@ import java.util.List;
 @Document
 public class Ingredients {
 
+    @Field
     List<Size> sizes;
-
-    @JsonProperty("typeofcups")
-    List<CupType> typeOfCups;
-
-    @JsonProperty("extra_fruits")
-    List<ExtraFruit> extraFruitsList;
+    @Field
+    List<CupType> typeofcups;
+    @Field
+    List<ExtraFruit> extrafruits;
 
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
     public static abstract class Option {
-        String id;
+        @Field("id")
+        BigDecimal objectId;
         String type;
-
+        String price;
     }
     @AllArgsConstructor
     public static class Size extends Option {
-        public Size(String id, String type) {
-            super(id, type);
+        public Size(BigDecimal id, String type, String price) {
+            super(id, type, price);
         }
     }
     @AllArgsConstructor
-    public static class CupType extends Option {
-        public CupType(String id, String type) {
-            super(id, type);
-        }
+    public static class CupType extends Option{
+        public CupType(BigDecimal id, String type,String price) {super(id,type,price);}
     }
     @AllArgsConstructor
     public static class ExtraFruit extends Option {
-        public ExtraFruit(String id, String type) {
-            super(id, type);
+        public ExtraFruit(BigDecimal id, String type, String price) {
+            super(id, type, price);
         }
     }
 }

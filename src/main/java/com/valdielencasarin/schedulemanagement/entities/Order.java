@@ -4,19 +4,23 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.sql.Array;
+import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
 @Builder
 @AllArgsConstructor
-public class Orders {
-
-    private String user_name;
+@Document
+public class Order {
+    @Id
+    private String objectId;
+    private String name;
     private String size;
     private String typeofcup;
     private String [] extrafruits;
     private String status;
-    private String id;
+    private String totalPrice;
 }
