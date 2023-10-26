@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.valdielencasarin.schedulemanagement")
+@ComponentScan(basePackages = "com.valdielencasarin.acai_roots_backend")
 public class Application implements CommandLineRunner {
     @Autowired
     private customerRepository repository;
