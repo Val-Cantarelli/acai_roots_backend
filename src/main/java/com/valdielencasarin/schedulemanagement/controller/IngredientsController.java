@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-@CrossOrigin(origins = "https://val-cantarelli.github.io/acai_roots/")
+@CrossOrigin(origins = "https://val-cantarelli.github.io")
 @RestController
 @RequestMapping(value = "/ingredients")
 public class IngredientsController {
