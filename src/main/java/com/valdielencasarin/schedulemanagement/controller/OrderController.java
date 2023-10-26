@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "https://val-cantarelli.github.io/acai_roots/")
+@CrossOrigin(origins = "https://val-cantarelli.github.io")
 @RestController
 @RequestMapping(value = "/orders")
 public class OrderController {

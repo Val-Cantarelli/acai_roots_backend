@@ -9,7 +9,7 @@ import java.util.List;
 // Trata as requisicoes(verb http) no target correpondente;
 // Utiliza o repository para abstrair a autoconfig da conexao com o db
 //
-@CrossOrigin(origins = "https://val-cantarelli.github.io/acai_roots/")
+@CrossOrigin(origins = "https://val-cantarelli.github.io")
 @RestController
 @RequestMapping(value = "/customers")
 public class CustomerController {
