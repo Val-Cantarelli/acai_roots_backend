@@ -23,13 +23,7 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String...args) throws Exception {
-
         for (Customer customer : repository.findAll()) {
-            System.out.println(customer);
         }
-
     }
-
 }
-
-
