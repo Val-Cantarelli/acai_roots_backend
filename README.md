@@ -1,5 +1,5 @@
 
-# Schedule Management
+
 
 ## Basic timetable organization developed using Java (Spring Boot).
 
@@ -51,6 +51,8 @@ Moreover, within the realm of cloud computing, the application remains segregate
 Regarding the selection of the programming language, Java was employed alongside the Spring Framework.
 ##### Setup
 To run this project, install it locally using npm:
+
+(continue . ..)
 ```
 $ bla bla bla
 ```
