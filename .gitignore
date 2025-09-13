@@ -35,3 +35,15 @@ build/
 /src/main/resources/application.properties
 ### VS Code ###
 .vscode/
+
+# Maven build directory
+target/
+
+# Test reports
+surefire-reports/
+
+# macOS system files
+.DS_Store
+
+# Environment files
+.env
