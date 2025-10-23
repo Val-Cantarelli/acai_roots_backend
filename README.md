@@ -1,4 +1,5 @@
-![Deploy](https://github.com/Val-Cantarelli/acai_roots_backend/actions/workflows/main.yml/badge.svg)
+[![Fly Deploy](https://github.com/Val-Cantarelli/acai_roots_backend/actions/workflows/fly.yml/badge.svg)](https://github.com/Val-Cantarelli/acai_roots_backend/actions/workflows/fly.yml)
+
 
 # Açaí Roots - Backend
 
