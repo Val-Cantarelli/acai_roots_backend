@@ -1,3 +1,5 @@
+![Deploy](https://github.com/Val-Cantarelli/acai_roots_backend/actions/workflows/deploy.yml/badge.svg)
+
 # Açaí Roots - Backend
 
 This is the backend repository for the Açaí Roots project, providing the REST API built with Java (Spring Boot).
